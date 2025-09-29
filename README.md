@@ -12,4 +12,38 @@ Internal CSS (di dalam <style>).
 Eksternal CSS (file .css).
 Aturan bawaan browser.
 Jadi kalau satu elemen diatur oleh ketiganya, maka inline CSS yang dipakai.
-<img width="720" height="842" alt="Cuplikan layar 2025-09-29 143912" src="https://github.com/user-attachments/assets/b936fcf3-86bc-4a5a-8898-3f2a8b759658" />
+# contoh html
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    p { color: blue; }   /* internal */
+  </style>
+  <link rel="stylesheet" href="style.css"> <!-- eksternal -->
+</head>
+<body>
+  <p style="color:red;">Contoh paragraf</p> <!-- inline -->
+</body>
+</html>
+#Contoh CSS
+p { color: green; }
+
+
+# 4
+Yang ditampilkan adalah deklrasi CSS dari ID, karena ID punya prioritas (specificity) lebih tinggi dibandingkan Class.
+Urutan kekuatan CSS:
+Inline CSS > ID > Class > Elemen > Default browser.
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.text-paragraf { color: green; }
+#paragraf-1 { color: blue; }
+</style>
+</head>
+<body>
+  <p id="paragraf-1" class="text-paragraf">
+    Contoh paragraf
+  </p>
+</body>
+</html>
